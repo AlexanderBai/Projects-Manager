@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${pageTitle}"></title>
+    <link rel="stylesheet" th:href="@{css/main.css}">
+</head>
+<body>
+
+    <h1 th:text="${pageTitle}"></h1>
+    <form method="post" th:action="${givenAction}">
+        <div>
+            <input type="text" name="title" placeholder="title" th:value="${givenTitle}">
+        </div>
+        <div>
+            <input type="text" name="context" placeholder="context" th:value="${givenContext}">
+        </div>
+        <div>
+            <button type="submit">POST</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
